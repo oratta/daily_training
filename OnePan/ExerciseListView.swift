@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ExerciseListView: View {
     @ObservedObject var viewModel: WorkoutViewModel
+    @State private var showingAddExerciseView = false
 
     var body: some View {
         NavigationView {
@@ -11,6 +12,14 @@ struct ExerciseListView: View {
                 }
             }
             .navigationBarTitle("Exercises")
+            .navigationBarItems(trailing: Button(action: {
+                showingAddExerciseView.toggle()
+            }) {
+                Image(systemName: "plus")
+            })
+            .sheet(isPresented: $showingAddExerciseView) {
+                AddExerciseView(viewModel: viewModel)
+            }
         }
     }
 }
