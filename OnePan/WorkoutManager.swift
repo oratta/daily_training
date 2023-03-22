@@ -1,6 +1,7 @@
 import Foundation
+import Combine
 class WorkoutManager {
-    var exercises: [Exercise] = []
+    @Published var exercises: [Exercise] = []
     
     private let userDefaultsKey = "WorkoutManagerData"
 
