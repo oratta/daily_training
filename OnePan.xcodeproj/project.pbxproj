@@ -20,6 +20,7 @@
 		9403233A29CAF3E100B3CEF1 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233929CAF3E100B3CEF1 /* WorkoutManager.swift */; };
 		9403233C29CAF67100B3CEF1 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233B29CAF67100B3CEF1 /* WorkoutViewModel.swift */; };
 		9403233E29CAF69F00B3CEF1 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233D29CAF69F00B3CEF1 /* ExerciseListView.swift */; };
+		9403234029CB075000B3CEF1 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233F29CB075000B3CEF1 /* AddExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9403233929CAF3E100B3CEF1 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		9403233B29CAF67100B3CEF1 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		9403233D29CAF69F00B3CEF1 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
+		9403233F29CB075000B3CEF1 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				9403233729CAF3C700B3CEF1 /* Exercise.swift */,
 				9403233B29CAF67100B3CEF1 /* WorkoutViewModel.swift */,
 				9403233D29CAF69F00B3CEF1 /* ExerciseListView.swift */,
+				9403233F29CB075000B3CEF1 /* AddExerciseView.swift */,
 			);
 			path = OnePan;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9403233E29CAF69F00B3CEF1 /* ExerciseListView.swift in Sources */,
+				9403234029CB075000B3CEF1 /* AddExerciseView.swift in Sources */,
 				9403233C29CAF67100B3CEF1 /* WorkoutViewModel.swift in Sources */,
 				9403233829CAF3C700B3CEF1 /* Exercise.swift in Sources */,
 				9403231429CAF31500B3CEF1 /* OnePan.xcdatamodeld in Sources */,
