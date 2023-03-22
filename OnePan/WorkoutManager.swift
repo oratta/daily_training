@@ -1,5 +1,26 @@
+import Foundation
 class WorkoutManager {
     var exercises: [Exercise] = []
+    
+    private let userDefaultsKey = "WorkoutManagerData"
+
+    init() {
+        load()
+    }
+
+    func save() {
+        if let encodedData = try? JSONEncoder().encode(exercises) {
+            UserDefaults.standard.set(encodedData, forKey: userDefaultsKey)
+        }
+    }
+
+    private func load() {
+        if let savedData = UserDefaults.standard.data(forKey: userDefaultsKey) {
+            if let decodedData = try? JSONDecoder().decode([Exercise].self, from: savedData) {
+                exercises = decodedData
+            }
+        }
+    }
 
     func addExercise(name: String, finalTarget: Int, daysToIncrease: Int, increaseAmount: Int, goalDays: Int) {
         let exercise = Exercise(name: name, finalTarget: finalTarget, daysToIncrease: daysToIncrease, increaseAmount: increaseAmount, goalDays: goalDays)

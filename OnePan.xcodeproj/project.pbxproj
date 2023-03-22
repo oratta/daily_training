@@ -83,7 +83,6 @@
 		940322FB29CAF31400B3CEF1 = {
 			isa = PBXGroup;
 			children = (
-				9403233929CAF3E100B3CEF1 /* WorkoutManager.swift */,
 				9403230629CAF31400B3CEF1 /* OnePan */,
 				9403231D29CAF31500B3CEF1 /* OnePanTests */,
 				9403232729CAF31500B3CEF1 /* OnePanUITests */,
@@ -104,6 +103,7 @@
 		9403230629CAF31400B3CEF1 /* OnePan */ = {
 			isa = PBXGroup;
 			children = (
+				9403233929CAF3E100B3CEF1 /* WorkoutManager.swift */,
 				9403230729CAF31400B3CEF1 /* OnePanApp.swift */,
 				9403230929CAF31400B3CEF1 /* ContentView.swift */,
 				9403230B29CAF31500B3CEF1 /* Assets.xcassets */,

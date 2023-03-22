@@ -1,4 +1,4 @@
-class Exercise {
+class Exercise: Codable {
     var name: String
     var currentTarget: Int
     var finalTarget: Int
