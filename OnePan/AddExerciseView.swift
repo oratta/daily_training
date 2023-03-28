@@ -36,6 +36,7 @@ struct AddExerciseView: View {
                     }) {
                         Text("Add Exercise")
                     }
+                    .disabled(name.isEmpty || finalTarget.isEmpty || daysToIncrease.isEmpty || increaseAmount.isEmpty || goalDays.isEmpty)
                 }
             }
             .navigationBarTitle("Add Exercise")
