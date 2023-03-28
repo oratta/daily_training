@@ -1,10 +1,3 @@
-//
-//  AddExerciseView.swift
-//  OnePan
-//
-//  Created by Kentaro Uesugi on 2023/03/22.
-//
-
 import SwiftUI
 
 struct AddExerciseView: View {

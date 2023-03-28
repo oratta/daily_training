@@ -1,43 +1,35 @@
 import Foundation
-import Combine
-class WorkoutManager {
-    @Published var exercises: [Exercise] = []
-    
-    private let userDefaultsKey = "WorkoutManagerData"
+
+class WorkoutManager: ObservableObject {
+    @Published private(set) var exercises: [Workout]
 
     init() {
-        load()
-    }
-
-    func save() {
-        if let encodedData = try? JSONEncoder().encode(exercises) {
-            UserDefaults.standard.set(encodedData, forKey: userDefaultsKey)
-        }
-    }
-
-    private func load() {
-        if let savedData = UserDefaults.standard.data(forKey: userDefaultsKey) {
-            if let decodedData = try? JSONDecoder().decode([Exercise].self, from: savedData) {
-                exercises = decodedData
-            }
-        }
+        exercises = [
+            Workout(id: UUID(), name: "Push-ups", repsDone: 0, currentTarget: 10, finalTarget: 100, daysToIncrease: 3, increaseAmount: 5, goalDays: 5, currentStreak: 0)
+        ]
     }
 
     func addExercise(name: String, finalTarget: Int, daysToIncrease: Int, increaseAmount: Int, goalDays: Int) {
-        let exercise = Exercise(name: name, finalTarget: finalTarget, daysToIncrease: daysToIncrease, increaseAmount: increaseAmount, goalDays: goalDays)
-        exercises.append(exercise)
+        exercises.append(Workout(id: UUID(), name: name, repsDone: 0, currentTarget: 10, finalTarget: finalTarget, daysToIncrease: daysToIncrease, increaseAmount: increaseAmount, goalDays: goalDays, currentStreak: 0))
     }
 
     func addRepsToExercise(name: String, reps: Int) {
-        if let exercise = exercises.first(where: { $0.name == name }) {
-            exercise.addReps(reps: reps)
+        guard let index = exercises.firstIndex(where: { $0.name == name }) else { return }
+        exercises[index].repsDone += reps
+    }
+
+    func updateExercise(name: String) {
+        guard let index = exercises.firstIndex(where: { $0.name == name }) else { return }
+        exercises[index].repsDone = 0
+        exercises[index].currentStreak += 1
+
+        if exercises[index].currentStreak % exercises[index].daysToIncrease == 0 {
+            exercises[index].currentTarget += exercises[index].increaseAmount
         }
     }
 
     func isGoalReachedForExercise(name: String) -> Bool {
-        if let exercise = exercises.first(where: { $0.name == name }) {
-            return exercise.isGoalReached()
-        }
-        return false
+        guard let exercise = exercises.first(where: { $0.name == name }) else { return false }
+        return exercise.currentStreak >= exercise.goalDays
     }
 }

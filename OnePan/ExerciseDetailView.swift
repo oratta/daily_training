@@ -1,15 +1,8 @@
-//
-//  ExerciseDetailView.swift
-//  OnePan
-//
-//  Created by Kentaro Uesugi on 2023/03/22.
-//
-
 import SwiftUI
 
 struct ExerciseDetailView: View {
     @ObservedObject var viewModel: WorkoutViewModel
-    var exercise: Exercise
+    var exercise: Workout
 
     @State private var repsToAdd: String = ""
 

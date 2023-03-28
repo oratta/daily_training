@@ -21,6 +21,8 @@
 		9403233C29CAF67100B3CEF1 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233B29CAF67100B3CEF1 /* WorkoutViewModel.swift */; };
 		9403233E29CAF69F00B3CEF1 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233D29CAF69F00B3CEF1 /* ExerciseListView.swift */; };
 		9403234029CB075000B3CEF1 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403233F29CB075000B3CEF1 /* AddExerciseView.swift */; };
+		942467E029D2D7B9004C3CB3 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942467DF29D2D7B9004C3CB3 /* Workout.swift */; };
+		942467E229D2D843004C3CB3 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942467E129D2D843004C3CB3 /* ExerciseDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		9403233B29CAF67100B3CEF1 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		9403233D29CAF69F00B3CEF1 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		9403233F29CB075000B3CEF1 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		942467DF29D2D7B9004C3CB3 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		942467E129D2D843004C3CB3 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				9403233B29CAF67100B3CEF1 /* WorkoutViewModel.swift */,
 				9403233D29CAF69F00B3CEF1 /* ExerciseListView.swift */,
 				9403233F29CB075000B3CEF1 /* AddExerciseView.swift */,
+				942467DF29D2D7B9004C3CB3 /* Workout.swift */,
+				942467E129D2D843004C3CB3 /* ExerciseDetailView.swift */,
 			);
 			path = OnePan;
 			sourceTree = "<group>";
@@ -283,10 +289,12 @@
 				9403233E29CAF69F00B3CEF1 /* ExerciseListView.swift in Sources */,
 				9403234029CB075000B3CEF1 /* AddExerciseView.swift in Sources */,
 				9403233C29CAF67100B3CEF1 /* WorkoutViewModel.swift in Sources */,
+				942467E029D2D7B9004C3CB3 /* Workout.swift in Sources */,
 				9403233829CAF3C700B3CEF1 /* Exercise.swift in Sources */,
 				9403231429CAF31500B3CEF1 /* OnePan.xcdatamodeld in Sources */,
 				9403231129CAF31500B3CEF1 /* Persistence.swift in Sources */,
 				9403230A29CAF31400B3CEF1 /* ContentView.swift in Sources */,
+				942467E229D2D843004C3CB3 /* ExerciseDetailView.swift in Sources */,
 				9403230829CAF31400B3CEF1 /* OnePanApp.swift in Sources */,
 				9403233A29CAF3E100B3CEF1 /* WorkoutManager.swift in Sources */,
 			);
