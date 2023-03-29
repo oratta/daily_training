@@ -37,9 +37,19 @@ struct AddExerciseView: View {
                         Text("Add Exercise")
                     }
                     .disabled(name.isEmpty || finalTarget.isEmpty || daysToIncrease.isEmpty || increaseAmount.isEmpty || goalDays.isEmpty)
+
                 }
             }
             .navigationBarTitle("Add Exercise")
+            .navigationBarItems(leading: cancelButton) // キャンセルボタンを追加します
+        }
+    }
+
+    private var cancelButton: some View {
+        Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            Text("Cancel")
         }
     }
 }
