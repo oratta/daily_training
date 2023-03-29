@@ -15,6 +15,7 @@ struct AddExerciseView: View {
             Form {
                 Section {
                     TextField("Name", text: $name)
+                        .keyboardType(.default)
                     TextField("Final Target", text: $finalTarget)
                         .keyboardType(.numberPad)
                     TextField("Days to Increase", text: $daysToIncrease)
@@ -32,6 +33,9 @@ struct AddExerciseView: View {
                             let goalDays = Int(goalDays) {
                             viewModel.addExercise(name: name, finalTarget: finalTarget, daysToIncrease: daysToIncrease, increaseAmount: increaseAmount, goalDays: goalDays)
                             presentationMode.wrappedValue.dismiss()
+                        }
+                        else{
+                            print("validation error: invalid data type")
                         }
                     }) {
                         Text("Add Exercise")
