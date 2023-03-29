@@ -1,10 +1,20 @@
 import SwiftUI
+import Combine
 
 class WorkoutViewModel: ObservableObject {
-    @Published private var workoutManager = WorkoutManager()
+    private var workoutManager = WorkoutManager()
+    private var cancellables = Set<AnyCancellable>()
 
     var exercises: [Workout] {
         workoutManager.exercises
+    }
+
+    init() {
+        workoutManager.$exercises
+            .sink { [weak self] _ in
+                self?.objectWillChange.send()
+            }
+            .store(in: &cancellables)
     }
 
     func addExercise(name: String, finalTarget: Int, daysToIncrease: Int, increaseAmount: Int, goalDays: Int) {

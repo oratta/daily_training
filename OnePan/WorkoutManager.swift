@@ -10,7 +10,10 @@ class WorkoutManager: ObservableObject {
     }
 
     func addExercise(name: String, finalTarget: Int, daysToIncrease: Int, increaseAmount: Int, goalDays: Int) {
-        exercises.append(Workout(id: UUID(), name: name, repsDone: 0, currentTarget: 10, finalTarget: finalTarget, daysToIncrease: daysToIncrease, increaseAmount: increaseAmount, goalDays: goalDays, currentStreak: 0))
+        let newWorkout = Workout(id: UUID(), name: name, repsDone: 0, currentTarget: 10,  finalTarget: finalTarget, daysToIncrease: daysToIncrease, increaseAmount: increaseAmount, goalDays: goalDays, currentStreak: 0)
+        DispatchQueue.main.async {
+            self.exercises.append(newWorkout)
+        }
     }
 
     func addRepsToExercise(name: String, reps: Int) {
